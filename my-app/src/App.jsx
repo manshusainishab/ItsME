@@ -33,7 +33,7 @@ export default function App() {
 
       {/* 3D Model */}
       <div className="relative z-10 w-full h-full">
-        <Canvas camera={{ position: [0, 1, 5] }}>
+        <Canvas camera={{ position: [0, 0, 5] }}>
           <ambientLight intensity={1} />
           <directionalLight position={[5, 5, 5]} />
           <ModelViewer onPointerDown={()=> setMusic(true)} path="/models/yourModel.glb" />
