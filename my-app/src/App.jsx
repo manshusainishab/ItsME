@@ -15,7 +15,10 @@ export default function App() {
     const playAudio = () => {
       audio.play().catch((e) => console.warn("Autoplay failed:", e));
     }
-    playAudio()
+    if (!music){
+      playAudio()
+      setMusic(true)
+    }
   }, [music]);
 
   return (
