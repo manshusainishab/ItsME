@@ -1,7 +1,148 @@
+@import "swiper/css";
+@import "swiper/css/effect-cards";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html, body {
-  @apply m-0 p-0 overflow-hidden;
+  @apply m-0 p-0 overflow-x-hidden overflow-y-auto;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 40px 10px rgba(34, 197, 94, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 60px 20px rgba(34, 197, 94, 0.9);
+  }
+}
+/* Ben 10 Futuristic Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Ben 10 Core Colors */
+    --background: 220 15% 6%;
+    --foreground: 120 100% 85%;
+    
+    /* Neon Green Theme */
+    --neon-green: 120 100% 50%;
+    --neon-green-glow: 120 100% 60%;
+    --neon-green-bright: 125 100% 65%;
+    --neon-green-dim: 120 80% 35%;
+    
+    /* Supporting Colors */
+    --tech-black: 220 15% 8%;
+    --tech-dark: 220 15% 12%;
+    --tech-gray: 220 10% 25%;
+    --matrix-green: 120 100% 45%;
+    --omnitrix-glow: 120 100% 70%;
+
+    /* Card System */
+    --card: var(--tech-dark);
+    --card-foreground: var(--foreground);
+
+    --popover: var(--tech-dark);
+    --popover-foreground: var(--foreground);
+
+    /* Primary (Neon Green) */
+    --primary: var(--neon-green);
+    --primary-foreground: var(--tech-black);
+
+    /* Secondary (Dark Tech) */
+    --secondary: var(--tech-gray);
+    --secondary-foreground: var(--neon-green-bright);
+
+    --muted: var(--tech-gray);
+    --muted-foreground: 120 50% 70%;
+
+    --accent: var(--neon-green-dim);
+    --accent-foreground: var(--foreground);
+
+    --destructive: 0 80% 60%;
+    --destructive-foreground: var(--foreground);
+
+    /* Borders & Inputs */
+    --border: var(--tech-gray);
+    --input: var(--tech-dark);
+    --ring: var(--neon-green-glow);
+
+    --radius: 0.375rem;
+
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-green)), hsl(var(--neon-green-bright)));
+    --gradient-tech: linear-gradient(180deg, hsl(var(--tech-dark)), hsl(var(--tech-black)));
+    --gradient-omnitrix: radial-gradient(circle, hsl(var(--omnitrix-glow)), hsl(var(--neon-green)));
+    
+    /* Shadows & Effects */
+    --glow-neon: 0 0 20px hsl(var(--neon-green) / 0.5);
+    --glow-strong: 0 0 40px hsl(var(--neon-green) / 0.8);
+    --shadow-tech: 0 8px 25px hsl(220 15% 2% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease-in-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--neon-green) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--neon-green) / 0.05) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  /* Ben 10 Hexagon Pattern */
+  .hex-pattern {
+    background-image: 
+      linear-gradient(30deg, hsl(var(--neon-green) / 0.1) 12%, transparent 12.5%, transparent 87%, hsl(var(--neon-green) / 0.1) 87.5%, hsl(var(--neon-green) / 0.1)),
+      linear-gradient(150deg, hsl(var(--neon-green) / 0.1) 12%, transparent 12.5%, transparent 87%, hsl(var(--neon-green) / 0.1) 87.5%, hsl(var(--neon-green) / 0.1)),
+      linear-gradient(30deg, hsl(var(--neon-green) / 0.1) 12%, transparent 12.5%, transparent 87%, hsl(var(--neon-green) / 0.1) 87.5%, hsl(var(--neon-green) / 0.1)),
+      linear-gradient(150deg, hsl(var(--neon-green) / 0.1) 12%, transparent 12.5%, transparent 87%, hsl(var(--neon-green) / 0.1) 87.5%, hsl(var(--neon-green) / 0.1));
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+  }
+
+  /* Neon Glow Effects */
+  .glow-neon {
+    box-shadow: var(--glow-neon);
+    transition: var(--transition-glow);
+  }
+  
+  .glow-neon:hover {
+    box-shadow: var(--glow-strong);
+  }
+
+  /* Tech Border */
+  .tech-border {
+    border: 1px solid hsl(var(--neon-green) / 0.3);
+    background: linear-gradient(135deg, 
+      hsl(var(--tech-dark) / 0.8) 0%, 
+      hsl(var(--tech-black) / 0.9) 100%);
+    position: relative;
+  }
+  
+  .tech-border::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: var(--gradient-neon);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .tech-border:hover::before {
+    opacity: 0.7;
+  }
 }
