@@ -20,7 +20,13 @@ const Navigation = () => {
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = [
+  type NavItem = {
+    path: string;
+    label: string;
+    icon: React.ComponentType<{ size?: number; className?: string }>;
+  };
+
+  const navItems: NavItem[] = [
     { path: "/", label: "Omnitrix", icon: Watch },
     { path: "/Home", label: "Home", icon: Home },
     { path: "/achievements", label: "Achievements", icon: Trophy },
@@ -30,7 +36,13 @@ const Navigation = () => {
     { path: "/projects", label: "Projects", icon: FolderOpen },
   ];
 
-  const NavButton = ({ item, mobile = false }) => {
+  const NavButton = ({
+    item,
+    mobile = false,
+  }: {
+    item: NavItem;
+    mobile?: boolean;
+  }) => {
     const Icon = item.icon;
     const isActive = location.pathname === item.path;
 
