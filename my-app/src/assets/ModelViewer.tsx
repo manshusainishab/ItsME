@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import { useGLTF, useAnimations, useProgress } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import type { Group, AnimationAction } from "three";
 import type { PointerEvent } from "react";
@@ -7,25 +7,34 @@ import type { PointerEvent } from "react";
 interface ModelViewerProps {
   path: string;
   onPointerDown?: () => void;
+  onLoad?: () => void; // new callback when model is loaded
 }
 
-export default function ModelViewer({ path, onPointerDown }: ModelViewerProps) {
+export default function ModelViewer({ path, onPointerDown, onLoad }: ModelViewerProps) {
   const group = useRef<Group>(null);
   const { scene, animations } = useGLTF(path);
   const { actions } = useAnimations(animations, group);
+  const { loaded } = useProgress(); // track loading progress
 
   const [animate, setAnimate] = useState(false);
   const [scale, setScale] = useState(20);
   const targetScale = 63;
   const targetRotationX = -Math.PI - Math.PI / 2;
 
+  // Trigger onLoad when GLTF is fully loaded
   useEffect(() => {
-  if (actions) {
-    (Object.values(actions) as AnimationAction[]).forEach((action) => {
-      action.play();
-    });
-  }
-}, [actions]);
+    if (loaded === 100) {
+      onLoad?.();
+    }
+  }, [loaded, onLoad]);
+
+  useEffect(() => {
+    if (actions) {
+      (Object.values(actions) as AnimationAction[]).forEach((action) => {
+        action.play();
+      });
+    }
+  }, [actions]);
 
   useFrame(() => {
     if (group.current) {

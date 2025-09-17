@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import ModelViewer from "@/assets/ModelViewer";
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Swiper
@@ -16,7 +16,9 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const audio = new Audio("/sound.mp3");
+    const audio = new Audio(
+      "https://uqkqrbzfmr2joipx.public.blob.vercel-storage.com/sound.mp3"
+    );
     if (music) audio.play().catch((e) => console.warn("Autoplay failed:", e));
   }, [music]);
 
@@ -30,72 +32,64 @@ export default function HomePage() {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden">
+      {/* Canvas with Suspense for Loader */}
+      <Suspense
+        fallback={
+          <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-black text-neon-green text-center px-4">
+            <h1 className="text-3xl md:text-5xl font-tech font-bold animate-pulse">
+              Get ready...
+            </h1>
+            <p className="text-xl md:text-2xl mt-4 font-tech tracking-wider">
+              We are entering a new galaxy
+            </p>
+          </div>
+        }
+      >
+        <Canvas camera={{ position: [0, 0, 5] }}>
+          <ambientLight intensity={1} />
+          <directionalLight position={[5, 5, 5]} />
+          <ModelViewer
+            path="https://uqkqrbzfmr2joipx.public.blob.vercel-storage.com/yourModel.glb"
+            onPointerDown={() => {
+              setMusic(true);
+              setTimeout(() => setShowMenu(true), 4000);
+            }}
+          />
+          <Environment preset="night" />
+        </Canvas>
+      </Suspense>
+
       {/* Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       >
-        <source src="/video.mp4" type="video/mp4" />
+        <source
+          src="https://uqkqrbzfmr2joipx.public.blob.vercel-storage.com/video.mp4"
+          type="video/mp4"
+        />
       </video>
-
-      {/* 3D Model */}
-      <div className="relative z-10 w-full h-full">
-        <Canvas camera={{ position: [0, 0, 5] }}>
-          <ambientLight intensity={1} />
-          <directionalLight position={[5, 5, 5]} />
-          <ModelViewer
-            onPointerDown={() => {
-              setMusic(true);
-              setTimeout(() => {
-                setShowMenu(true); // Show menu after 4s delay
-              }, 4000); // Show menu after model click
-            }}
-            path="/models/yourModel.glb"
-          />
-          {/* <OrbitControls /> */}
-          <Environment preset="night" />
-        </Canvas>
-      </div>
 
       {/* Centered Banner Slider */}
       {showMenu && (
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <Swiper
             modules={[Autoplay, EffectFade]}
-            autoplay={{
-              delay: 1850,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            className="w-80 h-80 flex items-center justify-center rounded-full shadow-[0_0_40px_10px_rgba(34,197,94,0.7)]
-                        animate-[pulseGlow_2s_infinite]"
+            autoplay={{ delay: 1850, disableOnInteraction: false }}
+            loop
+            className="w-80 h-80 flex items-center justify-center rounded-full shadow-[0_0_40px_10px_rgba(34,197,94,0.7)] animate-[pulseGlow_2s_infinite]"
           >
             {menuItems.map((item, index) => (
               <SwiperSlide key={index} className="flex items-center justify-center">
                 <div
                   onClick={() => navigate(item.path)}
-                  className="relative w-80 h-80 flex items-center justify-center 
-                        rounded-full overflow-hidden text-white text-lg font-bold 
-                        bg-gradient-to-r from-green-500/70 to-black/70 
-                        hover:from-green-600 hover:to-black/90 
-                        transition-all duration-500 cursor-pointer"
+                  className="relative w-80 h-80 flex items-center justify-center rounded-full overflow-hidden text-white text-lg font-bold bg-gradient-to-r from-green-500/70 to-black/70 hover:from-green-600 hover:to-black/90 transition-all duration-500 cursor-pointer"
                 >
-                  <img
-                    className="object-cover w-full h-full"
-                    src={item.url}
-                    alt={item.name}
-                  />
-                  <span
-                    className="absolute bottom-4 px-4 py-1 rounded text-sm font-bold tracking-widest
-             text-green-400 uppercase bg-black/40 
-             border border-green-500/40 
-             shadow-[0_0_10px_2px_rgba(34,197,94,0.7)]
-             animate-pulse-glow
-             transform transition-transform duration-300 hover:scale-110"
-                  >
+                  <img className="object-cover w-full h-full" src={item.url} alt={item.name} />
+                  <span className="absolute bottom-4 px-4 py-1 rounded text-sm font-bold tracking-widest text-green-400 uppercase bg-black/40 border border-green-500/40 shadow-[0_0_10px_2px_rgba(34,197,94,0.7)] animate-pulse-glow transform transition-transform duration-300 hover:scale-110">
                     {item.name}
                   </span>
                 </div>
