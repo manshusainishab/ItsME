@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Zap, Code, Rocket, Shield } from "lucide-react";
+import { SiInstagram, SiFacebook, SiLinkedin, SiYoutube } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   const quickStats = [
-    { label: "Years Experience", value: "5+", icon: Zap },
-    { label: "Projects Completed", value: "25+", icon: Code },
-    { label: "Alien Technologies", value: "10+", icon: Rocket },
-    { label: "Galaxies Served", value: "3", icon: Shield }
+    { label: "Years Experience", value: "1+", icon: Zap },
+    { label: "Projects Completed", value: "8+", icon: Code },
+    { label: "Technologies", value: "10+", icon: Rocket },
+    { label: "Places Worked At", value: "3", icon: Shield }
   ];
 
   const featuredSections = [
@@ -20,7 +21,7 @@ const Home = () => {
       color: "from-neon-green to-neon-green-bright"
     },
     {
-      title: "Projects", 
+      title: "Projects",
       description: "Innovative solutions built across dimensions",
       path: "/projects",
       icon: "🚀",
@@ -29,7 +30,7 @@ const Home = () => {
     {
       title: "Experience",
       description: "Professional journey through cosmic technology",
-      path: "/experience", 
+      path: "/experience",
       icon: "⚡",
       color: "from-omnitrix-glow to-neon-green"
     }
@@ -44,35 +45,41 @@ const Home = () => {
           {/* Main Heading */}
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-tech font-bold mb-6">
-              <span className="text-neon-green animate-glow-pulse">BEN 10</span>
+              <span className="text-neon-green animate-glow-pulse">HEY I'M</span>
               <br />
-              <span className="text-foreground">DEVELOPER</span>
+              <span className="text-foreground">MANSHU SAINI</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Transforming ideas into reality with the power of 
-              <span className="text-neon-green font-semibold"> alien technologies</span> and 
+              Transforming ideas into reality with the power of
+              <span className="text-neon-green font-semibold"> alien technologies</span> and
               <span className="text-neon-green font-semibold"> futuristic development</span>
             </p>
           </div>
 
           {/* Omnitrix-style CTA */}
           <div className="relative inline-block">
-            <div className="w-32 h-32 mx-auto mb-8 relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-green to-neon-green-bright animate-glow-pulse shadow-2xl shadow-neon-green/50" />
+            <a
+              href="https://drive.google.com/file/d/1xpXRWLaiGGSrm_nXEL_WPLf3xYNsOQaf/view?usp=sharing"
+              download
+              className="w-32 h-32 mx-auto mb-8 relative block group"
+            >
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-neon-green to-neon-green-bright animate-glow-pulse shadow-2xl shadow-neon-green/50 transition-transform group-hover:scale-105" />
               <div className="absolute inset-2 rounded-full bg-tech-black flex items-center justify-center">
-                <Zap size={48} className="text-neon-green animate-pulse" />
+                <Zap size={48} className="text-neon-green animate-pulse group-hover:scale-110 transition-transform" />
               </div>
               {/* Hexagon pattern overlay */}
               <div className="absolute inset-4 rounded-full border-2 border-neon-green/30 animate-pulse" />
-            </div>
-            <p className="text-neon-green font-tech font-semibold tracking-wider">
+            </a>
+
+            <p className="text-neon-green font-tech font-semibold tracking-wider text-center">
               READY FOR TRANSFORMATION
             </p>
           </div>
 
+
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <Button 
+            <Button
               size="lg"
               asChild
               className="bg-neon-green hover:bg-neon-green-bright text-tech-black font-tech font-semibold px-8 py-4 text-lg glow-neon"
@@ -82,7 +89,7 @@ const Home = () => {
                 <ArrowRight className="ml-2" />
               </Link>
             </Button>
-            <Button 
+            <Button
               variant="outline"
               size="lg"
               asChild
@@ -139,7 +146,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredSections.map((section, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="tech-border glow-neon hover:scale-105 transition-all duration-300 p-8 group relative overflow-hidden"
               >
@@ -153,7 +160,7 @@ const Home = () => {
                   <p className="text-muted-foreground text-center mb-6 leading-relaxed">
                     {section.description}
                   </p>
-                  <Button 
+                  <Button
                     asChild
                     variant="ghost"
                     className="w-full text-neon-green hover:text-neon-green-bright hover:bg-neon-green/10 font-semibold"
@@ -164,7 +171,7 @@ const Home = () => {
                     </Link>
                   </Button>
                 </div>
-                
+
                 {/* Animated Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${section.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
               </Card>
@@ -182,17 +189,22 @@ const Home = () => {
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             Let's build something extraordinary together. The universe is waiting for our next creation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              asChild
-              className="bg-neon-green hover:bg-neon-green-bright text-tech-black font-tech font-semibold px-12 py-4 text-lg glow-neon"
-            >
-              <Link to="/projects">
-                <Rocket className="mr-2" />
-                Start Mission
-              </Link>
-            </Button>
+          <div className="flex flex sm:flex-row gap-4 justify-center">
+            <a href="https://www.instagram.com/my_nst_daze/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <SiInstagram className="w-6 h-6 hover:scale-125 transition-transform text-neon-green rounded-lg font-tech glow-neon" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/manshusainishab/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <SiLinkedin className="w-6 h-6 hover:scale-125 transition-transform text-neon-green font-tech glow-neon" />
+            </a>
+
+            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <SiFacebook className="w-6 h-6 hover:scale-125 transition-transform text-neon-green rounded-full font-tech glow-neon" />
+            </a>
+
+            <a href="https://www.youtube.com/@ManshuNSTian" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <SiYoutube className="w-6 h-6 hover:scale-125 transition-transform text-neon-green rounded-lg font-tech glow-neon" />
+            </a>
           </div>
         </div>
       </section>

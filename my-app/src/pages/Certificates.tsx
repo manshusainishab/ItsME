@@ -6,43 +6,66 @@ const Certificates = () => {
   const certificates = [
     {
       id: 1,
-      title: "Galactic Web Development Certification",
-      issuer: "Intergalactic Institute of Technology",
+      title: "Global Rank 775 – IEEE Xtreme 18.0 Programming Competition",
+      issuer: "IEEE",
       date: "2024",
-      description: "Advanced certification in cosmic-scale web development and alien UI/UX design",
-      credentialId: "OMN-2024-001",
-      skills: ["React", "TypeScript", "Cosmic CSS", "Alien APIs"],
-      verifyUrl: "#"
+      description: "Secured an all-world rank of 775 in IEEE Xtreme 18.0, a 24-hour global competitive programming competition organized by IEEE.",
+      credentialId: "XTREME-775-2024",
+      skills: ["C++", "Java", "Python"],
+      verifyUrl: "https://drive.google.com/file/d/1CowrBeqFTpdZQvkG52-pHca_oO6NQUhC/view?pli=1"
     },
     {
       id: 2,
-      title: "Omnitrix System Architecture",
-      issuer: "Ben Tennyson Academy",
-      date: "2023",
-      description: "Specialized training in multi-dimensional system architecture and transformation protocols",
-      credentialId: "BT-ARCH-2023",
-      skills: ["System Design", "Multi-threading", "Transformation Logic", "Energy Management"],
-      verifyUrl: "#"
+      title: "Ethical Hacking",
+      issuer: "Coursera",
+      date: "2025",
+      description: "This course equips students with foundational knowledge of cybersecurity, focusing on system security, network protection, and ethical hacking practices.",
+      credentialId: "94U05MVa",
+      skills: [
+        "Cloud Computing",
+        "Computer Programming",
+        "Computer Security Incident Management",
+        "Leadership and Management",
+        "Linux",
+        "Network Architecture",
+        "Network Security",
+        "Risk Management"
+      ],
+      verifyUrl: "https://www.credly.com/badges/856d910c-ed8a-4327-b0d1-e8c05d8875f1/print"
     },
     {
       id: 3,
-      title: "Alien Technology Integration",
-      issuer: "Plumber Academy",
-      date: "2023",
-      description: "Expert-level certification in integrating alien technologies with Earth systems",
-      credentialId: "PA-ATI-2023",
-      skills: ["API Integration", "Protocol Translation", "Security", "Compatibility"],
-      verifyUrl: "#"
+      title: "Mathematics for Machine Learning and Data Science",
+      issuer: "Coursera",
+      date: "2025",
+      description: "Beginner-friendly specialization focused on mastering the mathematical foundations of AI and Machine Learning, including linear algebra, calculus, and probability, to build a strong toolkit for data science and ML applications.",
+      credentialId: "qOUjxuUM",
+      skills: [
+        "Algebra",
+        "Algorithms",
+        "Artificial Neural Networks",
+        "Calculus",
+        "Differential Equations",
+        "Linear Algebra",
+        "Machine Learning",
+        "Machine Learning Algorithms"
+      ],
+      verifyUrl: "https://www.credly.com/badges/3150ba38-a19d-4090-b244-77edbab97ef9/print"
     },
     {
       id: 4,
-      title: "Advanced DevOps & Deployment",
-      issuer: "Cosmic Cloud Institute",
-      date: "2022",
-      description: "Comprehensive certification covering deployment across multiple dimensions",
-      credentialId: "CCI-DEVOPS-2022",
-      skills: ["Docker", "Kubernetes", "CI/CD", "Multi-dimensional Deployment"],
-      verifyUrl: "#"
+      title: "NeutronFest 2024 – Core Committee Member",
+      issuer: "Neutron Tech-Fest",
+      date: "2024",
+      description: "Recognized for active contribution as a Core Committee Member at NeutronFest 2024, India’s pioneering AI-driven techno-cultural festival. Involved in event planning, website development, and community engagement.",
+      credentialId: "00324-NTF",
+      skills: [
+        "Event Management",
+        "Community Building",
+        "Team Collaboration",
+        "Project Coordination"
+      ],
+      verifyUrl: "https://drive.google.com/file/d/1IK1_OXyuYxLw2TQb__1CUcoqCqMnNuNW/view?usp=sharing"
     }
   ];
 
@@ -63,7 +86,7 @@ const Certificates = () => {
         {/* Certificates Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {certificates.map((cert) => (
-            <Card 
+            <Card
               key={cert.id}
               className="tech-border glow-neon hover:scale-[1.02] transition-all duration-300 p-8 group relative overflow-hidden"
             >
@@ -100,7 +123,7 @@ const Certificates = () => {
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {cert.skills.map((skill, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="px-3 py-1 bg-tech-gray text-neon-green-bright text-xs font-mono rounded-full border border-neon-green/30"
                     >
@@ -118,14 +141,16 @@ const Certificates = () => {
                     ID: {cert.credentialId}
                   </span>
                 </div>
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  className="text-neon-green hover:text-neon-green-bright hover:bg-tech-gray/50"
+
+                <a
+                  href={cert.verifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-neon-green-bright hover:underline z-10 relative"
                 >
-                  <ExternalLink size={14} className="mr-2" />
-                  Verify
-                </Button>
+                  <ExternalLink size={14} />
+                  <span>Verify</span>
+                </a>
               </div>
 
               {/* Animated Background */}

@@ -5,53 +5,40 @@ const Education = () => {
   const educationData = [
     {
       id: 1,
-      degree: "Master's in Omnitrix Engineering",
-      institution: "Galactic Institute of Technology",
-      location: "Bellwood, Earth",
-      period: "2022 - 2024",
-      grade: "Summa Cum Laude",
-      description: "Specialized in alien technology integration, multi-dimensional programming, and transformation protocols. Thesis: 'Optimizing Energy Distribution in Multi-Alien Transformation Systems'",
+      degree: "BTech in Computer Science & Artificial Intelligence",
+      institution: "Rishihood University",
+      location: "Sonipat, India",
+      period: "2023 - 2027",
+      grade: "Current GPA: 8.7/10",
+      description: "Pursuing a strong foundation in computer science with a specialization in Artificial Intelligence. Coursework covers core areas including algorithms, programming, databases, computer networks, and advanced AI/ML techniques. Actively engaged in projects, hackathons, and community initiatives to apply theoretical knowledge into practical, real-world solutions.",
       subjects: [
-        "Advanced Alien Programming",
-        "Quantum Computing",
-        "Interdimensional Databases",
-        "Energy Management Systems",
-        "Transformation Algorithms",
-        "Cosmic Security Protocols"
+        "Foundation of Programming",
+        "Mathematics for AI",
+        "Database Management Systems",
+        "Data Structures & Algorithms",
+        "Analysis and Design of Algorithms",
+        "Advanced Programming",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Computer Networks",
+        "Modern Computer Architecture",
+        "Quantum Computing Basics"
       ]
     },
     {
       id: 2,
-      degree: "Bachelor's in Computer Science",
-      institution: "Ben Tennyson University",
-      location: "Bellwood, Earth",
-      period: "2018 - 2022",
-      grade: "First Class Honors",
-      description: "Comprehensive study of computer science fundamentals with emphasis on real-world applications. Led multiple projects involving alien technology reverse engineering.",
+      degree: "12th Grade - Science Stream (Non-Medical)",
+      institution: "Delhi Public School",
+      location: "Hisar, Haryana, India",
+      period: "2021 - 2022",
+      grade: "80.4%",
+      description: "Focused on Physics, Chemistry, Mathematics, and Computer Science, building a strong foundation in problem-solving, logical reasoning, and analytical skills. Developed interest in technology and programming through academic projects and practical learning.",
       subjects: [
-        "Data Structures & Algorithms",
-        "Software Engineering",
-        "Web Development",
-        "Database Systems",
-        "Machine Learning",
-        "Cybersecurity"
-      ]
-    },
-    {
-      id: 3,
-      degree: "Advanced Plumber Training Certificate",
-      institution: "Plumber Academy",
-      location: "Mount Rushmore Base",
-      period: "2021",
-      grade: "Elite Level",
-      description: "Intensive training program covering alien threat assessment, technology analysis, and intergalactic law enforcement protocols.",
-      subjects: [
-        "Alien Technology Analysis",
-        "Threat Assessment",
-        "Intergalactic Law",
-        "Advanced Combat Systems",
-        "Diplomatic Protocols",
-        "Emergency Response"
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Computer Science",
+        "English"
       ]
     }
   ];
@@ -65,7 +52,7 @@ const Education = () => {
             EDUCATION
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Academic journey through cosmic knowledge and alien technologies
+            Academic journey through cosmic knowledge and technologies
           </p>
           <div className="hex-pattern absolute inset-0 opacity-10 pointer-events-none" />
         </div>
@@ -79,10 +66,10 @@ const Education = () => {
             <div key={edu.id} className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
               {/* Timeline Dot */}
               <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-neon-green rounded-full border-4 border-tech-black animate-glow-pulse z-10" />
-              
+
               {/* Education Card */}
               <Card className={`tech-border glow-neon hover:scale-[1.02] transition-all duration-300 p-8 group relative overflow-hidden ${index % 2 === 0 ? 'mr-1/2 pr-16' : 'ml-1/2 pl-16'} w-full max-w-lg`}>
-                
+
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center space-x-3">
@@ -129,7 +116,7 @@ const Education = () => {
                   </h4>
                   <div className="grid grid-cols-2 gap-2">
                     {edu.subjects.map((subject, subIndex) => (
-                      <span 
+                      <span
                         key={subIndex}
                         className="px-2 py-1 bg-tech-gray text-neon-green-bright text-xs font-mono rounded border border-neon-green/30"
                       >
@@ -149,9 +136,9 @@ const Education = () => {
         {/* Academic Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { number: "4.0", label: "GPA", suffix: "/4.0" },
+            { number: "8.7", label: "GPA", suffix: "/10.0" },
             { number: "6", label: "Years of Study", suffix: "" },
-            { number: "15+", label: "Research Projects", suffix: "" }
+            { number: "1", label: "Research Projects", suffix: "" }
           ].map((stat, index) => (
             <div key={index} className="text-center tech-border p-6 rounded-lg glow-neon">
               <div className="text-4xl font-tech font-bold text-neon-green mb-2">

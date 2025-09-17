@@ -6,102 +6,127 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Omnitrix Control Panel",
-      description: "Advanced control interface for managing alien transformations with real-time monitoring and energy optimization. Features intuitive UI for selecting from 10+ alien forms.",
-      image: "🛸",
-      technologies: ["React", "TypeScript", "Alien APIs", "Energy Management"],
+      title: "Theta: The Learning App",
+      description: "An E-learning platform designed to provide personalized and engaging educational content. Tailored for diverse learners, Theta makes learning accessible, interactive, and secure with role-based permissions and integrated payments.",
+      image: "📚",
+      technologies: ["MongoDB", "React", "Node.js", "Express.js", "JavaScript", "CSS"],
       category: "Web Application",
       status: "Completed",
-      duration: "6 months",
-      team: "4 developers",
+      duration: "3 months",
+      team: "Solo Project",
       features: [
-        "Real-time transformation monitoring",
-        "Energy efficiency optimization",
-        "Multi-alien form management",
-        "Emergency protocols integration"
+        "Admin can perform full CRUD operations on Courses and Lectures",
+        "Integrated Razorpay APIs for secure payment processing",
+        "Superadmin role to manage permissions and admin access",
+        "Buyer can purchase courses and access lectures seamlessly",
+        "User authentication with secure login and account creation",
+        "Implemented routing and pagination using React Router DOM"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
-      stars: 150
+      liveUrl: "https://elearning-bice.vercel.app",
+      githubUrl: "https://github.com/manshusainishab/Elearning-platform",
+      stars: 25
     },
     {
       id: 2,
-      title: "Galactic Threat Detection System",
-      description: "AI-powered system for detecting and analyzing alien threats across the galaxy. Uses machine learning to predict invasion patterns and recommend defense strategies.",
-      image: "🌌",
-      technologies: ["Python", "TensorFlow", "Cosmic Databases", "Real-time Analytics"],
-      category: "AI/ML Application",
+      title: "The Souled Store Website Clone",
+      description: "A front-end replica of The Souled Store e-commerce platform, built to demonstrate proficiency in React, modular UI design, and responsive layouts. Designed for seamless navigation and optimized user experience across devices.",
+      image: "🛍️",
+      technologies: ["React", "CSS", "JavaScript", "Tailwind CSS", "HTML", "Bootstrap", "Figma"],
+      category: "Web Application",
       status: "Completed",
-      duration: "8 months",
-      team: "6 developers",
+      duration: "2 months",
+      team: "Solo Project",
       features: [
-        "Real-time threat analysis",
-        "Predictive invasion modeling",
-        "Automated alert systems",
-        "Multi-dimensional data processing"
+        "Implemented modular React components for efficient UI management",
+        "Utilized Context API for global state management across components",
+        "Developed responsive layouts ensuring cross-device compatibility",
+        "Set up routing for seamless navigation between multiple pages",
+        "Optimized performance for smooth user interactions"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
-      stars: 89
+      liveUrl: "https://the-souled-store-clone.vercel.app",
+      githubUrl: "https://github.com/manshusainishab/The-Souled-Store-Clone",
+      stars: 28
     },
     {
       id: 3,
-      title: "Plumber Communication Hub",
-      description: "Secure communication platform for intergalactic law enforcement. Enables encrypted messaging and coordination between Earth and alien civilizations.",
-      image: "📡",
-      technologies: ["Node.js", "Socket.io", "Encryption", "Multi-protocol Support"],
-      category: "Communication Platform",
+      title: "Personal Portfolio Website (Old Version)",
+      description: "An earlier version of my personal portfolio built with React to showcase my projects, achievements, and skills. Designed with a focus on clean navigation and responsive layouts, it provided a central hub for my professional presence.",
+      image: "🌐",
+      technologies: ["React", "CSS", "JavaScript", "HTML"],
+      category: "Web Application",
       status: "Completed",
-      duration: "4 months",
-      team: "3 developers",
+      duration: "1 month",
+      team: "Solo Project",
       features: [
-        "End-to-end encryption",
-        "Multi-species communication",
-        "Real-time translation",
-        "Emergency broadcast systems"
+        "Responsive design optimized for mobile and desktop devices",
+        "Project showcase with descriptions and external links",
+        "About section highlighting education and career journey",
+        "Contact form for direct communication",
+        "Smooth navigation using React Router"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
-      stars: 203
+      liveUrl: "https://manshusainishab.github.io/portfolio/",
+      githubUrl: "https://github.com/manshusainishab/portfolio",
+      stars: 15
     },
     {
       id: 4,
-      title: "Alien DNA Analyzer",
-      description: "Comprehensive tool for analyzing and cataloging alien DNA samples. Provides detailed genetic breakdown and transformation compatibility analysis.",
-      image: "🧬",
-      technologies: ["React", "D3.js", "Bioinformatics APIs", "Data Visualization"],
-      category: "Scientific Tool",
-      status: "In Progress",
-      duration: "3 months",
-      team: "5 developers",
+      title: "Art Gallery Website",
+      description: "A dynamic online platform connecting art enthusiasts, collectors, and creators worldwide. Designed with a user-friendly interface and robust features for discovering, buying, and selling diverse artworks. Showcases curated collections from emerging and established artists, fostering a vibrant art community.",
+      image: "🎨",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      category: "Web Application",
+      status: "Completed",
+      duration: "1 month",
+      team: "Solo Project",
       features: [
-        "DNA sequence analysis",
-        "Genetic visualization",
-        "Compatibility assessment",
-        "Sample database management"
+        "Curated collections showcasing diverse artworks across various mediums",
+        "User-friendly interface for exploring, buying, and selling art",
+        "Platform for artists to showcase their creations to a global audience",
+        "Community-driven experience connecting creators, collectors, and enthusiasts"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
-      stars: 67
+      liveUrl: "https://eloquent-licorice-0228c7.netlify.app",
+      githubUrl: "https://github.com/manshusainishab/artgallerymanshu",
+      stars: 18
     },
     {
       id: 5,
-      title: "Interdimensional Portal Router",
-      description: "Network management system for routing communications and travel through interdimensional portals. Ensures safe and efficient passage between realities.",
-      image: "🌀",
-      technologies: ["Go", "Quantum Computing", "Portal Protocols", "Network Security"],
-      category: "Infrastructure",
-      status: "Planning",
-      duration: "TBD",
-      team: "2 developers",
+      title: "School Website",
+      description: "A basic school website design that presents the structure and functionality of an educational institution’s online presence. Built with a focus on clean UI, easy navigation, and essential sections like home, about, academics, and contact.",
+      image: "🏫",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      category: "Web Application",
+      status: "Completed",
+      duration: "1 month",
+      team: "Solo Project",
       features: [
-        "Portal route optimization",
-        "Dimensional traffic management",
-        "Safety protocol enforcement",
-        "Multi-reality synchronization"
+        "Homepage with clean and modern design",
+        "About section highlighting school values and vision",
+        "Academics page for curriculum and subjects overview",
+        "Contact page with form and location details"
       ],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://bejewelled-churros-b4f3b3.netlify.app",
+      githubUrl: "https://github.com/manshusainishab/schoolpagemanshu",
+      stars: 12
+    },
+    {
+      id: 6,
+      title: "Dine In Website",
+      description: "A restaurant website built using vanilla HTML, CSS, and JavaScript, offering an elegant design for browsing menus and booking tables online. Created to demonstrate core front-end development skills without relying on frameworks.",
+      image: "🍽️",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      category: "Web Application",
+      status: "Completed",
+      duration: "2 weeks",
+      team: "Solo Project",
+      features: [
+        "Interactive menu display with categories and pricing",
+        "Table booking system with date and time selection",
+        "Responsive layout for desktop and mobile devices",
+        "Smooth animations and transitions for better user experience",
+        "Contact section for customer queries and reservations"
+      ],
+      liveUrl: "https://bright-florentine-ab507b.netlify.app",
+      githubUrl: "https://github.com/manshusainishab/dine-in-restaurant",
       stars: 12
     }
   ];
@@ -132,7 +157,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Card 
+            <Card
               key={project.id}
               className="tech-border glow-neon hover:scale-[1.02] transition-all duration-300 p-0 group relative overflow-hidden"
             >
@@ -204,7 +229,7 @@ const Projects = () => {
                   </h4>
                   <div className="flex flex-wrap gap-1">
                     {project.technologies.map((tech, index) => (
-                      <span 
+                      <span
                         key={index}
                         className="px-2 py-1 bg-tech-gray text-neon-green-bright text-xs font-mono rounded border border-neon-green/30"
                       >
@@ -216,22 +241,37 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-2">
-                  <Button 
-                    variant="default" 
-                    size="sm"
-                    className="flex-1 bg-neon-green hover:bg-neon-green-bright text-tech-black font-semibold"
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
                   >
-                    <ExternalLink size={14} className="mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="border-neon-green/50 text-neon-green hover:bg-neon-green/10"
+                    <Button
+                      variant="default"
+                      size="sm"
+                      className="w-full bg-neon-green hover:bg-neon-green-bright text-tech-black font-semibold"
+                    >
+                      <ExternalLink size={14} className="mr-2" />
+                      Live Demo
+                    </Button>
+                  </a>
+
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Github size={14} />
-                  </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-neon-green/50 text-neon-green hover:bg-neon-green/10"
+                    >
+                      <Github size={14} />
+                    </Button>
+                  </a>
                 </div>
+
               </div>
 
               {/* Animated Background */}
@@ -243,8 +283,8 @@ const Projects = () => {
         {/* Project Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { number: "25+", label: "Total Projects" },
-            { number: "500+", label: "GitHub Stars" },
+            { number: "12+", label: "Total Projects" },
+            { number: "500+", label: "Visits" },
             { number: "10+", label: "Technologies" },
             { number: "95%", label: "Success Rate" }
           ].map((stat, index) => (

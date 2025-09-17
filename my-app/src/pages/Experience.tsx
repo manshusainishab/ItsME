@@ -1,98 +1,108 @@
-import { Briefcase, Calendar, MapPin, Users, Code, Rocket } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Users, Code, Rocket, Cpu } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Experience = () => {
+  const skills = [
+    "PYTHON",
+    "C++",
+    "JAVA",
+    "HTML",
+    "CSS / Tailwind CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Firebase",
+    "REST APIs",
+    "Git & GitHub",
+    "Apache Superset",
+    "Event Management",
+    "Team Leadership"
+  ];
+
   const experiences = [
     {
       id: 1,
-      title: "Senior Omnitrix Developer",
-      company: "Intergalactic Defense Corporation",
-      location: "Bellwood, Earth",
-      period: "2023 - Present",
+      title: "Software Developer Engineering Intern",
+      company: "ALLEN DIGITAL",
+      location: "Bangalore, India (Onsite)",
+      period: "JAN 2025 - JULY 2025",
       type: "Full-time",
-      description: "Leading development of next-generation Omnitrix systems with improved alien transformation protocols and enhanced energy efficiency. Spearheading a team of interdimensional developers.",
+      description: "At ALLEN Digital, I worked as a Software Development Intern, where I contributed to enhancing large-scale digital learning platforms used by thousands of students and educators daily. My projects combined feature development, debugging, performance optimization, and data-driven insights.",
       achievements: [
-        "Reduced transformation time by 40% through algorithm optimization",
-        "Led team of 8 developers across 3 different dimensions",
-        "Implemented new security protocols preventing unauthorized access",
-        "Designed scalable architecture supporting 1M+ transformations daily"
+        "Built a Tinder-like flashcard swiping feature that boosted student engagement by 25% and increased daily active users by 15%",
+        "Fixed 60+ bugs and implemented 6+ new features in the Presentation Controller, improving live class flow for teachers and students",
+        "Resolved 12+ production issues in Interactive Revision Notes containing 3D objects, simulations, and media; ensured full cross-device responsiveness (iOS, Android, Mac, Windows, iPads)",
+        "Developed dashboards using Apache Superset to visualize class event data, accelerating debugging and improving development insights",
+        "Authored unit tests for the asset library to ensure consistent behavior across diverse assets, improving reliability and reducing regressions"
       ],
       technologies: [
-        "Alien Programming Languages",
-        "Quantum Computing",
-        "Energy Management APIs",
-        "Interdimensional Databases",
-        "Transformation Protocols"
-      ]
+        "HTML",
+        "Tailwind CSS",
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "DBViewer",
+        "Apache Superset",
+        "Python"
+      ],
+      orgnization: "https://allendigital.in/"
     },
     {
       id: 2,
-      title: "Full Stack Alien Developer",
-      company: "Plumber Tech Solutions",
-      location: "Mount Rushmore Base",
-      period: "2021 - 2023",
-      type: "Full-time",
-      description: "Developed and maintained critical systems for intergalactic law enforcement operations. Built responsive web applications for real-time alien threat monitoring.",
+      title: "Google Developer Group Secretary",
+      company: "Google Developer Group Rishihood University",
+      location: "Sonipat, Haryana, India (Onsite)",
+      period: "2024 - 2025",
+      type: "Leadership / Community Role",
+      description: "Coordinated developer community initiatives, organized technical workshops, and facilitated collaboration between students and industry professionals. Supported event execution, community growth, and knowledge sharing within the GDG Rishihood ecosystem.",
       achievements: [
-        "Built threat detection system with 99.9% accuracy",
-        "Reduced system response time by 60%",
-        "Implemented real-time communication across galaxies",
-        "Maintained 24/7 uptime for critical defense systems"
+        "Organized and managed 4+ technical events, workshops, and hackathons with 200+ participants",
+        "Collaborated with Google Developer Experts (GDEs) and mentors to bring industry insights to students",
+        "Increased community engagement by 40% through consistent events, newsletters, and social outreach",
+        "Streamlined event and sponsorship operations, ensuring smooth execution and high participant satisfaction"
       ],
       technologies: [
+        "Community Leadership",
+        "Event Management",
+        "Public Speaking",
+        "Team Collaboration",
         "React",
         "Node.js",
         "TypeScript",
-        "Cosmic Databases",
-        "Real-time APIs",
-        "Security Protocols"
-      ]
+        "Firebase",
+        "GitHub",
+        "REST APIs"
+      ],
+      orgnization: "https://gdg.community.dev/gdg-on-campus-rishihood-university-sonipat-india/"
     },
     {
       id: 3,
-      title: "Junior Developer Intern",
-      company: "Ben Tennyson Enterprises",
-      location: "Bellwood, Earth",
-      period: "2020 - 2021",
-      type: "Internship",
-      description: "Started as an intern working on basic alien technology interfaces. Quickly promoted to handling complex transformation logic and user experience design.",
+      title: "Core Committee Member",
+      company: "Neutron Fest – India’s Pioneering AI Techno-Cultural Fest",
+      location: "Sonipat, Haryana, India (Onsite)",
+      period: "2024",
+      type: "Leadership / Event Management",
+      description: "As part of the core team, contributed to planning, organizing, and executing Neutron Fest, India’s first new-age AI-driven techno-cultural festival. Worked on integrating technology with culture to create an engaging and innovative experience for participants.",
       achievements: [
-        "Redesigned user interface increasing user satisfaction by 85%",
-        "Optimized alien DNA parsing algorithms",
-        "Contributed to open-source alien technology projects",
-        "Received 'Rising Star Developer' award"
+        "Collaborated with a 20+ member core team to host India’s first AI techno-cultural fest",
+        "Designed and maintained the official Neutron Fest website for registrations and event updates",
+        "Coordinated sponsorship and logistics efforts, ensuring smooth execution of multi-track events",
+        "Engaged 1000+ participants through workshops, cultural showcases, and AI-driven experiences"
       ],
       technologies: [
-        "JavaScript",
-        "HTML/CSS",
-        "Basic Alien APIs",
-        "UI/UX Design",
-        "Version Control",
-        "Agile Methodologies"
-      ]
-    },
-    {
-      id: 4,
-      title: "Freelance Web Developer",
-      company: "Various Galactic Clients",
-      location: "Remote (Multiple Galaxies)",
-      period: "2019 - 2020",
-      type: "Freelance",
-      description: "Provided web development services to various alien civilizations and Earth-based organizations. Specialized in creating universal interfaces compatible across species.",
-      achievements: [
-        "Completed 25+ projects with 100% client satisfaction",
-        "Developed universal translation interfaces",
-        "Created responsive designs for multiple device types",
-        "Built e-commerce platforms for interplanetary trade"
+        "Event Management",
+        "Community Building",
+        "Team Collaboration",
+        "Leadership",
+        "Project Coordination"
       ],
-      technologies: [
-        "WordPress",
-        "PHP",
-        "MySQL",
-        "Universal CSS",
-        "Cross-Species UX",
-        "Payment Gateways"
-      ]
+      orgnization: "https://www.neutronfest.com"
     }
   ];
 
@@ -110,10 +120,27 @@ const Experience = () => {
           <div className="hex-pattern absolute inset-0 opacity-10 pointer-events-none" />
         </div>
 
+        <div className="mb-16">
+          <h2 className="flex items-center justify-center space-x-2 text-2xl font-tech font-semibold text-neon-green mb-8 uppercase tracking-wider">
+            <Cpu size={20} />
+            <span>Technical Skills</span>
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {skills.map((skill, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-tech-gray text-neon-green-bright text-sm font-mono rounded-full border border-neon-green/30 hover:border-neon-green/60 transition-colors"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* Experience Timeline */}
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <Card 
+            <Card
               key={exp.id}
               className="tech-border glow-neon hover:scale-[1.01] transition-all duration-300 p-8 group relative overflow-hidden"
             >
@@ -172,11 +199,11 @@ const Experience = () => {
               <div>
                 <h4 className="flex items-center space-x-2 text-sm font-tech font-semibold text-neon-green mb-4 uppercase tracking-wider">
                   <Code size={16} />
-                  <span>Technologies Used</span>
+                  <span>SKILLS</span>
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIndex) => (
-                    <span 
+                    <span
                       key={techIndex}
                       className="px-3 py-1 bg-tech-gray text-neon-green-bright text-xs font-mono rounded-full border border-neon-green/30 hover:border-neon-green/60 transition-colors"
                     >
@@ -185,10 +212,18 @@ const Experience = () => {
                   ))}
                 </div>
               </div>
+              <div className="mt-6">
+                <a href={exp.orgnization} target="_blank" rel="noopener noreferrer" className="no-underline">
+                  <h4 className="flex items-center space-x-2 text-sm font-tech font-semibold text-neon-green mb-4 uppercase tracking-wider">
+                    <Code size={16} />
+                    <span>VIEW ORGANIZATION</span>
+                  </h4>
+                </a>
+              </div>
 
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-neon-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
+
               {/* Timeline Connector */}
               {index < experiences.length - 1 && (
                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gradient-to-b from-neon-green to-neon-green-dim" />
@@ -200,10 +235,10 @@ const Experience = () => {
         {/* Career Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
-            { number: "5+", label: "Years Experience" },
-            { number: "4", label: "Companies" },
-            { number: "50+", label: "Projects Delivered" },
-            { number: "3", label: "Galaxies Served" }
+            { number: "1+", label: "Years Experience" },
+            { number: "3", label: "Companies" },
+            { number: "12+", label: "Projects Delivered" },
+            { number: "15+", label: "Skills" }
           ].map((stat, index) => (
             <div key={index} className="text-center tech-border p-6 rounded-lg glow-neon">
               <div className="text-4xl font-tech font-bold text-neon-green mb-2">
