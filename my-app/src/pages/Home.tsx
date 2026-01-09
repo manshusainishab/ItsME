@@ -59,7 +59,7 @@ const Home = () => {
           {/* Omnitrix-style CTA */}
           <div className="relative inline-block">
             <a
-              href="https://drive.google.com/file/d/1xpXRWLaiGGSrm_nXEL_WPLf3xYNsOQaf/view?usp=sharing"
+              href="https://drive.google.com/file/d/1RHSfSiRSySz5BDTTn3x6a_PuTJC8CjGf/view?usp=sharing"
               download
               className="w-32 h-32 mx-auto mb-8 relative block group"
             >
