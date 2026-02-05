@@ -142,7 +142,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card
               key={exp.id}
-              className="tech-border glow-neon hover:scale-[1.01] transition-all duration-300 p-8 group relative overflow-hidden"
+              className="tech-border glow-neon transition-all duration-300 p-8 group relative overflow-hidden"
             >
               {/* Header */}
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">

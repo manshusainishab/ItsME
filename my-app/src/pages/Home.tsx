@@ -115,7 +115,7 @@ const Home = () => {
             {quickStats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <Card key={index} className="tech-border glow-neon hover:scale-105 transition-all duration-300 p-6 text-center group">
+                <Card key={index} className="tech-border glow-neon transition-all duration-300 p-6 text-center group">
                   <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-neon-green to-neon-green-bright rounded-full flex items-center justify-center group-hover:animate-glow-pulse">
                     <Icon size={24} className="text-tech-black" />
                   </div>
@@ -148,7 +148,7 @@ const Home = () => {
             {featuredSections.map((section, index) => (
               <Card
                 key={index}
-                className="tech-border glow-neon hover:scale-105 transition-all duration-300 p-8 group relative overflow-hidden"
+                className="tech-border glow-neon transition-all duration-300 p-8 group relative overflow-hidden"
               >
                 <div className="relative z-10">
                   <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">

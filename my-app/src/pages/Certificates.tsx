@@ -88,7 +88,7 @@ const Certificates = () => {
           {certificates.map((cert) => (
             <Card
               key={cert.id}
-              className="tech-border glow-neon hover:scale-[1.02] transition-all duration-300 p-8 group relative overflow-hidden"
+              className="tech-border glow-neon transition-all duration-300 p-8 group relative overflow-hidden"
             >
               {/* Certificate Header */}
               <div className="flex items-start justify-between mb-6">

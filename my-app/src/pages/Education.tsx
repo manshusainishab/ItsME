@@ -68,7 +68,7 @@ const Education = () => {
               <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-neon-green rounded-full border-4 border-tech-black animate-glow-pulse z-10" />
 
               {/* Education Card */}
-              <Card className={`tech-border glow-neon hover:scale-[1.02] transition-all duration-300 p-8 group relative overflow-hidden ${index % 2 === 0 ? 'mr-1/2 pr-16' : 'ml-1/2 pl-16'} w-full max-w-lg`}>
+              <Card className={`tech-border glow-neon transition-all duration-300 p-8 group relative overflow-hidden ${index % 2 === 0 ? 'mr-1/2 pr-16' : 'ml-1/2 pl-16'} w-full max-w-lg`}>
 
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">

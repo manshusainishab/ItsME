@@ -59,7 +59,7 @@ const Achievements = () => {
             return (
               <Card
                 key={achievement.id}
-                className="tech-border glow-neon hover:scale-105 transition-all duration-300 p-8 group"
+                className="tech-border glow-neon transition-all duration-300 p-8 group"
               >
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">

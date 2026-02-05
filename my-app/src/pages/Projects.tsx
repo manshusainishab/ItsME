@@ -159,7 +159,7 @@ const Projects = () => {
           {projects.map((project) => (
             <Card
               key={project.id}
-              className="tech-border glow-neon hover:scale-[1.02] transition-all duration-300 p-0 group relative overflow-hidden"
+              className="tech-border glow-neon transition-all duration-300 p-0 group relative overflow-hidden"
             >
               {/* Project Image/Icon */}
               <div className="h-48 bg-gradient-to-br from-tech-dark to-tech-black flex items-center justify-center border-b border-tech-gray">
